@@ -1,0 +1,17 @@
+# Gradle / Android Studio
+.gradle/
+**/build/
+.idea/
+local.properties
+
+# OS / tooling
+*.log
+Thumbs.db
+Desktop.ini
+
+# Kotlin / JVM
+*.class
+*.hprof
+
+# Optional local notes
+TODO.local.md
