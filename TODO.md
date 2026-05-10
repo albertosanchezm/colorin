@@ -28,9 +28,9 @@
 
 ## Modos de Pintura
 
-- [ ] Implementar modo intermedio: selección de zona activa y pincel restringido.
-- [ ] Implementar máscara binaria por zona para recorte de trazos.
-- [ ] Implementar modo avanzado: pintura libre dentro del lienzo.
+- [x] Implementar modo intermedio: selección de zona activa y pincel restringido.
+- [x] Implementar máscara binaria por zona para recorte de trazos.
+- [x] Implementar modo avanzado: pintura libre dentro del lienzo.
 - [ ] Añadir herramientas básicas: deshacer, rehacer, borrar zona y limpiar.
 - [ ] Evaluar persistencia del historial de acciones para restaurar deshacer/rehacer.
 
@@ -70,7 +70,7 @@
 
 ### Fase 2
 
-- [ ] Nivel intermedio con máscaras por zona.
+- [x] Nivel intermedio con máscaras por zona.
 
 ### Fase 3
 

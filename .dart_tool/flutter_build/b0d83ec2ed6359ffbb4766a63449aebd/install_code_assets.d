@@ -1,0 +1,1 @@
+ C:\\Users\\alber\\Desktop\\colorin\\.dart_tool\\flutter_build\\b0d83ec2ed6359ffbb4766a63449aebd\\native_assets.json: 

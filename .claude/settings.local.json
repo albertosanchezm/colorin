@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"c:\\\\Users\\\\alber\\\\Desktop\\\\colorin\\\\\")",
+      "Read(//c/Users/alber/Desktop/**)",
+      "Bash(flutter --version)",
+      "PowerShell(flutter --version 2>&1)",
+      "Bash(git rm *)"
+    ]
+  }
+}
