@@ -18,18 +18,18 @@ class FlutterCatalogRepository implements CatalogRepository {
   final List<Drawing> _drawings;
 
   static const _palette = [
-    PaletteColor(id: 'red', hex: '#FF6B6B', order: 0),
-    PaletteColor(id: 'orange', hex: '#F7B267', order: 1),
-    PaletteColor(id: 'yellow', hex: '#FFD93D', order: 2),
-    PaletteColor(id: 'green', hex: '#6BCB77', order: 3),
-    PaletteColor(id: 'mint', hex: '#4DDFB3', order: 4),
-    PaletteColor(id: 'blue', hex: '#4D96FF', order: 5),
-    PaletteColor(id: 'navy', hex: '#355CDE', order: 6),
-    PaletteColor(id: 'purple', hex: '#845EC2', order: 7),
-    PaletteColor(id: 'pink', hex: '#FF8FAB', order: 8),
-    PaletteColor(id: 'brown', hex: '#B08968', order: 9),
-    PaletteColor(id: 'gray', hex: '#ADB5BD', order: 10),
-    PaletteColor(id: 'black', hex: '#343A40', order: 11),
+    PaletteColor(id: 'red', hex: '#FF6B6B'),
+    PaletteColor(id: 'orange', hex: '#F7B267'),
+    PaletteColor(id: 'yellow', hex: '#FFD93D'),
+    PaletteColor(id: 'green', hex: '#6BCB77'),
+    PaletteColor(id: 'mint', hex: '#4DDFB3'),
+    PaletteColor(id: 'blue', hex: '#4D96FF'),
+    PaletteColor(id: 'navy', hex: '#355CDE'),
+    PaletteColor(id: 'purple', hex: '#845EC2'),
+    PaletteColor(id: 'pink', hex: '#FF8FAB'),
+    PaletteColor(id: 'brown', hex: '#B08968'),
+    PaletteColor(id: 'gray', hex: '#ADB5BD'),
+    PaletteColor(id: 'black', hex: '#343A40'),
   ];
 
   static Future<FlutterCatalogRepository> create() async {

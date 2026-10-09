@@ -39,9 +39,8 @@ enum DifficultyMode { simple, medium, advanced }
 class PaletteColor {
   final String id;
   final String hex;
-  final int order;
 
-  const PaletteColor({required this.id, required this.hex, required this.order});
+  const PaletteColor({required this.id, required this.hex});
 }
 
 class PaintPoint {
@@ -63,17 +62,10 @@ class PaintStroke {
     required this.points,
   });
 
-  PaintStroke copyWith({
-    int? zoneId,
-    String? colorHex,
-    double? brushRadiusPx,
-    List<PaintPoint>? points,
-    bool clearZoneId = false,
-  }) =>
-      PaintStroke(
-        zoneId: clearZoneId ? null : (zoneId ?? this.zoneId),
-        colorHex: colorHex ?? this.colorHex,
-        brushRadiusPx: brushRadiusPx ?? this.brushRadiusPx,
+  PaintStroke copyWith({List<PaintPoint>? points}) => PaintStroke(
+        zoneId: zoneId,
+        colorHex: colorHex,
+        brushRadiusPx: brushRadiusPx,
         points: points ?? this.points,
       );
 }

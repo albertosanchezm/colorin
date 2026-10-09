@@ -7,7 +7,6 @@ import '../models/models.dart';
 abstract class PaintProgressRepository {
   PaintProgress? loadProgress(String drawingId, DifficultyMode mode);
   void saveProgress(PaintProgress progress);
-  void clearProgress(String drawingId, DifficultyMode mode);
 }
 
 class SharedPrefsPaintProgressRepository implements PaintProgressRepository {
@@ -73,11 +72,6 @@ class SharedPrefsPaintProgressRepository implements PaintProgressRepository {
       }).toList(),
     });
     _prefs.setString(_progressKey(progress.drawingId, progress.mode), serialized);
-  }
-
-  @override
-  void clearProgress(String drawingId, DifficultyMode mode) {
-    _prefs.remove(_progressKey(drawingId, mode));
   }
 
   String _progressKey(String drawingId, DifficultyMode mode) =>
