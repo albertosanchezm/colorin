@@ -1,16 +1,21 @@
 import 'package:go_router/go_router.dart';
 
 import '../core/models/models.dart';
-import '../features/catalog/screens/category_list_screen.dart';
 import '../features/catalog/screens/drawing_list_screen.dart';
 import '../features/catalog/screens/level_selection_screen.dart';
+import '../features/gallery/screens/my_drawings_screen.dart';
+import '../features/home/screens/home_screen.dart';
 import '../features/paint/screens/paint_editor_screen.dart';
 
 final router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      builder: (_, __) => const CategoryListScreen(),
+      builder: (_, __) => const HomeScreen(),
+    ),
+    GoRoute(
+      path: '/my-drawings',
+      builder: (_, __) => const MyDrawingsScreen(),
     ),
     GoRoute(
       path: '/drawings/:categoryId',

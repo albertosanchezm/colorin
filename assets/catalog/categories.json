@@ -3,8 +3,45 @@
     "id": "dinosaurs",
     "title": "Dinosaurios",
     "description": "Explora dibujos de dinosaurios",
-    "image": "dinosaurs/dinosaurs-easy-1.png",
+    "image": "home/dinosaurs.png",
+    "color": "#F7931E",
     "assetsDirectory": "dinosaurs",
     "order": 0
+  },
+  {
+    "id": "cars",
+    "title": "Coches",
+    "description": "Coches, camiones y mucho más",
+    "image": "home/cars.png",
+    "color": "#E53935",
+    "assetsDirectory": "cars",
+    "order": 1
+  },
+  {
+    "id": "castles",
+    "title": "Castillos",
+    "description": "Castillos, princesas y dragones",
+    "image": "home/castles.png",
+    "color": "#7E57C2",
+    "assetsDirectory": "castles",
+    "order": 2
+  },
+  {
+    "id": "animals",
+    "title": "Animales",
+    "description": "Animales de la selva y la granja",
+    "image": "home/animals.png",
+    "color": "#43A047",
+    "assetsDirectory": "animals",
+    "order": 3
+  },
+  {
+    "id": "fantasy",
+    "title": "Fantasía",
+    "description": "Unicornios, hadas y arcoíris",
+    "image": "home/fantasy.png",
+    "color": "#EC407A",
+    "assetsDirectory": "fantasy",
+    "order": 4
   }
 ]

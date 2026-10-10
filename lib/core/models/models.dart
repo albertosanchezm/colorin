@@ -3,6 +3,7 @@ class Category {
   final String name;
   final String description;
   final String backgroundAsset;
+  final String? colorHex;
   final String assetsDirectory;
   final int order;
 
@@ -11,6 +12,7 @@ class Category {
     required this.name,
     required this.description,
     required this.backgroundAsset,
+    this.colorHex,
     required this.assetsDirectory,
     required this.order,
   });

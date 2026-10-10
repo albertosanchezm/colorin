@@ -66,6 +66,7 @@ class FlutterCatalogRepository implements CatalogRepository {
           name: item['title'] as String,
           description: item['description'] as String,
           backgroundAsset: item['image'] as String,
+          colorHex: item['color'] as String?,
           assetsDirectory: assetsDir,
           order: (item['order'] as int?) ?? index,
         );
@@ -78,7 +79,8 @@ class FlutterCatalogRepository implements CatalogRepository {
           id: 'dinosaurs',
           name: 'Dinosaurios',
           description: 'Explora dibujos de dinosaurios',
-          backgroundAsset: 'dinosaurs/dinosaurs-easy-1.png',
+          backgroundAsset: 'home/dinosaurs.png',
+          colorHex: '#F7931E',
           assetsDirectory: 'dinosaurs',
           order: 0,
         ),

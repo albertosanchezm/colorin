@@ -23,3 +23,9 @@ flutter:
   assets:
     - assets/catalog/
     - assets/dinosaurs/
+    - assets/home/
+
+  fonts:
+    - family: Fredoka
+      fonts:
+        - asset: assets/fonts/Fredoka.ttf
