@@ -25,6 +25,7 @@ class Drawing {
   final String outlineAsset;
   final String zoneMapAsset;
   final Set<DifficultyMode> difficultyTags;
+  final DrawingComplexity complexity;
 
   const Drawing({
     required this.id,
@@ -33,10 +34,15 @@ class Drawing {
     required this.outlineAsset,
     required this.zoneMapAsset,
     required this.difficultyTags,
+    this.complexity = DrawingComplexity.easy,
   });
 }
 
 enum DifficultyMode { simple, medium, advanced }
+
+/// How intricate a drawing's shapes are. Unrelated to [DifficultyMode],
+/// which is how the child colors it.
+enum DrawingComplexity { easy, medium, hard }
 
 class PaletteColor {
   final String id;

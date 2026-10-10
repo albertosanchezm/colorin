@@ -12,6 +12,7 @@ import '../widgets/category_card.dart';
 import '../widgets/chunky_button.dart';
 import '../widgets/meadow_background.dart';
 import '../widgets/outlined_text.dart';
+import '../widgets/settings_button.dart';
 
 const _titleStroke = Color(0xFF1C5FB8);
 const _titleYellow = Color(0xFFFFD23F);
@@ -72,25 +73,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           ),
         ),
       );
-  }
-
-  void _openSettings() {
-    showDialog<void>(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text('Ajustes', style: roundedTextStyle(fontSize: 26, color: _titleStroke)),
-        content: Text(
-          'Muy pronto podrás cambiar los ajustes aquí.',
-          style: roundedTextStyle(fontSize: 18, color: const Color(0xFF374151), weight: 500),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text('Vale', style: roundedTextStyle(fontSize: 18, color: _titleStroke)),
-          ),
-        ],
-      ),
-    );
   }
 
   @override
@@ -203,7 +185,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   Positioned(
                     top: h * 0.03,
                     right: h * 0.04,
-                    child: _SettingsButton(size: h * 0.11, onPressed: _openSettings),
+                    child: SettingsButton(size: h * 0.11),
                   ),
                 ],
               );
@@ -320,32 +302,6 @@ class _PageDots extends StatelessWidget {
             ),
           ),
       ],
-    );
-  }
-}
-
-class _SettingsButton extends StatelessWidget {
-  const _SettingsButton({required this.size, required this.onPressed});
-
-  final double size;
-  final VoidCallback onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return Semantics(
-      button: true,
-      label: 'Ajustes',
-      child: GestureDetector(
-        onTap: onPressed,
-        child: Icon(
-          Icons.settings_rounded,
-          size: size,
-          color: Colors.white,
-          shadows: const [
-            Shadow(color: Color(0x881C5FB8), blurRadius: 6, offset: Offset(0, 3)),
-          ],
-        ),
-      ),
     );
   }
 }

@@ -44,7 +44,10 @@ class FlutterCatalogRepository implements CatalogRepository {
   @override
   List<Drawing> getDrawings(String categoryId) =>
       _drawings.where((d) => d.categoryId == categoryId).toList()
-        ..sort((a, b) => a.title.compareTo(b.title));
+        ..sort((a, b) {
+          final byComplexity = a.complexity.index.compareTo(b.complexity.index);
+          return byComplexity != 0 ? byComplexity : a.title.compareTo(b.title);
+        });
 
   @override
   Drawing? getDrawing(String drawingId) =>
@@ -128,11 +131,21 @@ class FlutterCatalogRepository implements CatalogRepository {
           outlineAsset: outlineAsset,
           zoneMapAsset: zoneMapAsset,
           difficultyTags: DifficultyMode.values.toSet(),
+          complexity: _complexityFromName(baseName),
         ));
       }
     }
 
     drawings.sort((a, b) => a.title.compareTo(b.title));
     return drawings;
+  }
+
+  /// Reads the complexity from the file name, e.g. `castles-hard-2.png`.
+  /// Drawings without a tag count as easy.
+  static DrawingComplexity _complexityFromName(String baseName) {
+    final tokens = baseName.toLowerCase().split(RegExp(r'[-_ ]'));
+    if (tokens.any((t) => t == 'hard' || t == 'dificil')) return DrawingComplexity.hard;
+    if (tokens.any((t) => t == 'medium' || t == 'medio')) return DrawingComplexity.medium;
+    return DrawingComplexity.easy;
   }
 }
